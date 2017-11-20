@@ -1,0 +1,118 @@
+@mixin trans-rot() {
+    $rot: rotate(90deg);
+    -webkit-transform: $rot;
+    -ms-transform: $rot;
+    transform: $rot;
+}
+
+$fntSize: 20vmin;
+$brd: 10px solid black;
+$mg-tp: 8vmin;
+$bd-dim: 70vmin;
+$sub-ttl-font: 12vmin;
+$pd-top: 5vmin;
+
+body {
+    background: url('https://goo.gl/f2jN1v') no-repeat fixed center;
+    background-size: cover;
+    font-family: "Architects Daughter", "Handlee", cursive;
+    width: 100%;
+    height: 100%;
+}
+
+.title {
+    font-size: 24vmin;
+    text-align: center;
+    display: none;
+}
+
+.intro1,
+.intro2 {
+    width: 90%;
+    margin: auto;
+    margin-top: $mg-tp;
+    display: none;
+    &__table {
+        width: 100%;
+        text-align: center;
+    }
+    &__title {
+        padding-bottom: 25px;
+        font-size: $sub-ttl-font;
+    }
+    &__options {
+        width: 100%;
+        text-align: center;
+        td {
+            font-size: 12vmin;
+            cursor: pointer;
+            width: 50%;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+
+.board {
+    margin-top: $mg-tp;
+    display: none;
+    &__table {
+        width: $bd-dim;
+        height: $bd-dim;
+        margin: auto;
+    }
+
+    &__row {
+        .board__square {
+            font-size: $fntSize;
+            line-height: $fntSize;
+            width: $bd-dim / 3;
+            height: $bd-dim / 3;
+            border: $brd;
+            text-align: center;
+            &:first-child {
+                border-left: none;
+            }
+            &:last-child {
+                border-right: none;
+            }
+        }
+        &:first-child .board__square {
+            border-top: none;
+        }
+        &:last-child .board__square {
+            border-bottom: none;
+        }
+    }
+
+    &__result {
+        display: none;
+        width: 50% !important;
+        text-align: center;
+        font-size: $sub-ttl-font;
+    }
+
+    &__btns {
+        width: 100%;
+        td {
+            width: 25%;
+            padding-top: $pd-top;
+        }
+    }
+    &__restart {
+        @extend .bk-btn;
+        text-align: right;
+    }
+}
+
+
+.bk-btn {
+    padding-top: $pd-top;
+    font-size: 8vmin;
+    cursor: pointer;
+    &:hover {
+        text-decoration: underline;
+    }
+}

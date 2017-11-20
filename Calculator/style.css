@@ -1,0 +1,135 @@
+body {
+  background: url(https://goo.gl/As5ajH) no-repeat center fixed;
+  background-size: cover;
+  margin: 0px;
+  min-height: 100%;
+  width: 100%;
+}
+
+#cal-body {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 294px;
+  height: 450px;
+  background-color: #484D4F;
+  text-align: center;
+  padding: 12px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 12px 0px 0px #2C3031, 7px 16px 6px 7px rgba(0,0,0,0.3), inset 7px 7px 15px 0px rgba(255,255,255,0.12), -7px -7px 15px 0px rgba(0,0,0,0.12);
+}
+#signature {
+  font-family: "Orbitron", sans-serif;
+  color: #ffda93;
+}
+
+#signature h4 {
+  font-size: 16px;
+  margin: 0 0 5px 10px;
+  text-align: left;
+  position: relative;
+}
+
+#signature p {
+  font-size: 10px;
+  display: inline-block;
+  margin: 0;
+  position: absolute;
+  top: 1px;
+}
+#display-container {
+  height: 75px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: right;
+  vertical-align: middle;
+  padding: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: inset 5px 10px 14px 0px rgba(255,255,255,0.12);
+}
+
+#display {
+  font-family: "Orbitron", sans-serif;
+  margin: 0;
+  margin-top: 7px;
+  font-size: 32px;
+  height: 55px;
+  line-height: 55px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+#display::-webkit-scrollbar {
+  height: 7px;
+  background: transparent;
+}
+#display::-webkit-scrollbar-thumb {
+  background: rgba(221, 221, 221, 0.25);
+  border-radius: 10px;
+  width: px;
+}
+
+#display::-moz-scrollbar {
+  height: 7px;
+  background: transparent;
+}
+#display::-moz-scrollbar-thumb {
+  background: rgba(221, 221, 221, 0.25);
+  border-radius: 10px;
+  width: px;
+}
+
+#buttons {
+  margin-top: 5px;
+}
+#cal-body .row {
+  padding: 5px 0;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+#buttons button {
+  width: 100%;
+  height: 55px;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+#buttons button:active {
+ box-shadow: none;
+ transform: translateY(4px);
+}
+
+.col-xs-3,
+.col-xs-6 {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.op-btn,
+.sgn-btn {
+  background-color: #1d1f20;
+  box-shadow: 0px 4px 0px 0px #0C1011,
+    inset 6px 8px 12px 0px rgba(255,255,255,0.12),
+    inset -6px -8px 12px 0px rgba(0,0,0,0.12);
+  color: white;
+}
+
+.ac-btn,
+.eq-btn {
+  background-color: #830c1c;
+  box-shadow: 0px 4px 0px 0px #5E000D, inset 6px 8px 12px 0px rgba(255,255,255,0.12), inset -6px -8px 12px 0px rgba(0,0,0,0.12);
+  color: white;
+}
+.num-btn {
+  box-shadow: 0px 4px 0px 0px #959595, inset 6px 8px 12px 0px rgba(255,255,255,0.12), inset -6px -8px 12px 0px rgba(0,0,0,0.12);
+}

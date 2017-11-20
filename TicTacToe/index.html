@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">Tic-Tac-Toe</h1>
+        <div class="intro1 main">
+            <table class="intro1__table">
+                <tr>
+                    <td colspan='2' class="intro1__title">Play versus:</td>
+                </tr>
+                <tr class="intro1__options">
+                    <td class="intro1__options__com">CPU</td>
+                    <td class="intro1__options__pl2">Player2</td>
+                </tr>
+            </table>
+        </div>
+        <div class="intro2 main">
+            <table class="intro2__table">
+                <tr>
+                    <td colspan='2' class="intro2__title">Play as:</td>
+                </tr>
+                <tr class="intro2__options">
+                    <td class="intro2__options__x">X</td>
+                    <td class="intro2__options__o">O</td>
+                </tr>
+            </table>
+            <p class="intro2__bk-btn bk-btn">&lt; Back</p>
+        </div>
+        <div class="board main">
+            <table class="board__table">
+                <tr class="board__row">
+                    <td class="board__square" id='pos-0'>&nbsp;</td>
+                    <td class="board__square" id='pos-1'>&nbsp;</td>
+                    <td class="board__square" id='pos-2'>&nbsp;</td>
+                </tr>
+                <tr class="board__row">
+                    <td class="board__square" id='pos-3'>&nbsp;</td>
+                    <td class="board__square" id='pos-4'>&nbsp;</td>
+                    <td class="board__square" id='pos-5'>&nbsp;</td>
+                </tr>
+                <tr class="board__row">
+                    <td class="board__square" id='pos-6'>&nbsp;</td>
+                    <td class="board__square" id='pos-7'>&nbsp;</td>
+                    <td class="board__square" id='pos-8'>&nbsp;</td>
+                </tr>
+            </table>
+            <table class="board__btns">
+                <tr>
+                    <td class="board__bk-btn bk-btn">&lt;Back</td>
+                    <td class="board__result"></td>
+                    <td class="board__restart">Reset&gt;</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

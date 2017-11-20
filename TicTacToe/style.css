@@ -1,0 +1,82 @@
+body {
+  background: url("https://goo.gl/f2jN1v") no-repeat fixed center;
+  background-size: cover;
+  font-family: "Architects Daughter", "Handlee", cursive;
+  width: 100%;
+  height: 100%; }
+
+.title {
+  font-size: 24vmin;
+  text-align: center;
+  display: none; }
+
+.intro1,
+.intro2 {
+  width: 90%;
+  margin: auto;
+  margin-top: 8vmin;
+  display: none; }
+  .intro1__table,
+  .intro2__table {
+    width: 100%;
+    text-align: center; }
+  .intro1__title,
+  .intro2__title {
+    padding-bottom: 25px;
+    font-size: 12vmin; }
+  .intro1__options,
+  .intro2__options {
+    width: 100%;
+    text-align: center; }
+    .intro1__options td,
+    .intro2__options td {
+      font-size: 12vmin;
+      cursor: pointer;
+      width: 50%; }
+      .intro1__options td:hover,
+      .intro2__options td:hover {
+        text-decoration: underline; }
+
+.board {
+  margin-top: 8vmin;
+  display: none; }
+  .board__table {
+    width: 70vmin;
+    height: 70vmin;
+    margin: auto; }
+  .board__row .board__square {
+    font-size: 20vmin;
+    line-height: 20vmin;
+    width: 23.3333333333vmin;
+    height: 23.3333333333vmin;
+    border: 10px solid black;
+    text-align: center; }
+    .board__row .board__square:first-child {
+      border-left: none; }
+    .board__row .board__square:last-child {
+      border-right: none; }
+  .board__row:first-child .board__square {
+    border-top: none; }
+  .board__row:last-child .board__square {
+    border-bottom: none; }
+  .board__result {
+    display: none;
+    width: 50% !important;
+    text-align: center;
+    font-size: 12vmin; }
+  .board__btns {
+    width: 100%; }
+    .board__btns td {
+      width: 25%;
+      padding-top: 5vmin; }
+  .board__restart {
+    text-align: right; }
+
+.bk-btn, .board__restart {
+  padding-top: 5vmin;
+  font-size: 8vmin;
+  cursor: pointer; }
+  .bk-btn:hover, .board__restart:hover {
+    text-decoration: underline; }
+
+/*# sourceMappingURL=style.css.map */

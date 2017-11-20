@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="container" ng-app="myApp" ng-controller="customersCtrl">
+        <div id="wiki-row">
+            <div id='wiki-bar' class='row'>
+                <div class="col-sm-12 col-lg-6">
+                    <h2 id='title'><i class="fa fa-wikipedia-w"></i>ikipedia Viewer</h2>
+                </div>
+                <div class="col-sm-12 col-lg-6 buttons">
+                    <a id="random-btn" class="btn btn-default" href='https://en.wikipedia.org/wiki/Special:Random' target="_blank">Random</a>
+                    <div class="search">
+                        <button id="search-btn" class="btn btn-default">Search</button>
+                        <div class="search-bar"> <span class="fa fa-search"></span>
+                            <input placeholder="Search...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="results">
+                <div class='result' ng-repeat="art in articles">
+                    <a ng-href="{{art.link}}" target="_blank">
+                        <h4>{{ art.name }}</h4>
+                        <p>{{ art.desc }}</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

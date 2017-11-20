@@ -1,0 +1,32 @@
+#mainBox {
+    margin: 10% 10%;
+    padding: 10%;
+    background-color: white;
+    border-radius: 2%;
+}
+
+#author {
+    color: #aaa;
+    text-align: right;
+    width: 100%;
+}
+
+#tweet {
+    text-align: right;
+}
+
+.btn-default {
+    color: white;
+    border: 3px solid;
+    font-size: 130%;
+}
+
+.btn-default:hover {
+    color: white;
+}
+
+@media screen and (max-width: 992px) {
+    #mainBox {
+        padding: 5%;
+    }
+}
