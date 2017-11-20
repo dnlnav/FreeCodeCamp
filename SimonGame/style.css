@@ -1,0 +1,106 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f0f0f0;
+  color: #0f0f0f; }
+  body.strict {
+    background-color: #0f0f0f;
+    color: #f0f0f0; }
+
+.chg-mode {
+  display: none;
+  color: #f0f0f0;
+  background-color: #0f0f0f;
+  position: absolute;
+  top: 1vmin;
+  right: 1vmin;
+  border-radius: 50%;
+  height: 15vmin;
+  width: 15vmin;
+  text-align: center;
+  padding-top: 3.4vmin;
+  padding-bottom: 3.4vmin;
+  font-size: 3vmin;
+  cursor: pointer; }
+  .chg-mode:active {
+    transform: scale(1.1, 1.1); }
+  .chg-mode.strict {
+    color: #0f0f0f;
+    background-color: #f0f0f0; }
+
+.brd {
+  margin: auto;
+  margin-top: 15vmin;
+  transition: all 0.5s;
+  position: relative;
+  text-align: center; }
+  .brd__strt {
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    width: 25vmin;
+    height: 25vmin;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border: none;
+    outline: none;
+    font-size: 8vmin;
+    transition: transform 0.1s;
+    z-index: 1; }
+    .brd__strt.strict {
+      background-color: #0f0f0f; }
+    .brd__strt:active, .brd__strt.active {
+      transform: scale(1.1, 1.1);
+      font-size: 9vmin; }
+    .brd__strt__txt {
+      display: inline-block;
+      display: none; }
+  .brd__btn {
+    width: 33.3333333333vmin;
+    height: 33.3333333333vmin;
+    border: 1.5vmin solid #f0f0f0;
+    display: inline-block;
+    transition: all 0.25s;
+    z-index: 1; }
+    .brd__btn.strict {
+      border-color: #0f0f0f; }
+    .brd__btn--1 {
+      background-color: #004d00;
+      transform-origin: center center;
+      border-top-left-radius: 100%; }
+      .brd__btn--1.active {
+        background-color: green;
+        transform-origin: bottom right;
+        transform: scale(1.1);
+        border-width: 0; }
+    .brd__btn--2 {
+      background-color: #cc0000;
+      transform-origin: center center;
+      border-top-right-radius: 100%; }
+      .brd__btn--2.active {
+        background-color: red;
+        transform-origin: bottom left;
+        transform: scale(1.1);
+        border-width: 0; }
+    .brd__btn--3 {
+      background-color: #cccc00;
+      transform-origin: center center;
+      border-bottom-left-radius: 100%; }
+      .brd__btn--3.active {
+        background-color: yellow;
+        transform-origin: top right;
+        transform: scale(1.1);
+        border-width: 0; }
+    .brd__btn--4 {
+      background-color: #0000cc;
+      transform-origin: center center;
+      border-bottom-right-radius: 100%; }
+      .brd__btn--4.active {
+        background-color: blue;
+        transform-origin: top left;
+        transform: scale(1.1);
+        border-width: 0; }
+
+/*# sourceMappingURL=style.css.map */

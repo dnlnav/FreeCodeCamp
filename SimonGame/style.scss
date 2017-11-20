@@ -1,0 +1,121 @@
+$dim-sec: 100vmin / 3;
+$br-sp: 1.5vmin;
+$br-rd: 100%;
+$bc: #f0f0f0;
+$dbc: #0f0f0f;
+$dk-pc: 10%;
+
+@mixin chgClr($clr,$to) {
+  background-color: darken($clr, $dk-pc);
+  transform-origin: center center;
+  &.active {
+    background-color: $clr;
+    transform-origin: $to;
+    transform: scale(1.1);
+     border-width: 0;
+  }
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: $bc;
+  color: $dbc;
+  &.strict {
+    background-color: $dbc;
+    color: $bc;
+  }
+}
+
+.chg-mode {
+  display: none;
+  $dim: 15vmin;
+  $pd: 3.4vmin;
+  color: $bc;
+  background-color: $dbc;
+  position: absolute;
+  top: 1vmin;
+  right: 1vmin;
+  border-radius: 50%;
+  height: $dim;
+  width: $dim;
+  text-align: center;
+  padding-top: $pd;
+  padding-bottom: $pd;
+  font-size: 3vmin;
+  cursor: pointer;
+  &:active {
+    transform: scale(1.1, 1.1);
+  }
+  &.strict {
+    color: $dbc;
+    background-color: $bc;
+  }
+}
+
+.brd {
+  margin: auto;
+  margin-top: 15vmin;
+  transition: all 0.5s;
+  position: relative;
+  text-align: center;
+  &__strt {
+    $dim: 25vmin;
+    $fs: 8vmin;
+    border-radius: 50%;
+    background-color: $bc;
+    width: $dim;
+    height: $dim;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border: none;
+    outline: none;
+    font-size: 8vmin;
+    transition: transform 0.1s;
+    z-index: 1;
+    &.strict{
+      background-color: $dbc;
+    }
+    &:active,
+    &.active {
+      transform: scale(1.1, 1.1);
+      font-size: $fs + 1vmin;
+    }
+    &__txt {
+      display: inline-block;
+      display: none;
+    }
+  }
+  &__btn {
+    width: $dim-sec;
+    height: $dim-sec;
+    border: $br-sp solid $bc;
+    display: inline-block;
+    transition: all 0.25s;
+    z-index: 1;
+    
+    &.strict{
+     border-color: $dbc; 
+    }
+
+    &--1 {
+      @include chgClr(green, bottom right);
+      border-top-left-radius: $br-rd;
+    }
+    &--2 {
+      @include chgClr(red, bottom left);
+      border-top-right-radius: $br-rd;
+    }
+    &--3 {
+      @include chgClr(yellow, top right);
+      border-bottom-left-radius: $br-rd;
+    }
+    &--4 {
+      @include chgClr(blue, top left);
+      border-bottom-right-radius: $br-rd;
+    }
+  }
+}
